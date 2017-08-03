@@ -11,4 +11,4 @@
 ![image](https://github.com/sols11/DreamKeeper-ARPG/blob/master/Assets/Img/%E6%B8%B8%E6%88%8F%E5%BE%AA%E7%8E%AF.png)
 
 角色架构：
-![image](https://github.com/sols11/DreamKeeper-ARPG/blob/master/Assets/Img/%E8%A7%92%E8%89%B2%E6%9E%B6%E6%9E%84.png）
+![image](https://github.com/sols11/DreamKeeper-ARPG/blob/master/Assets/Img/%E8%A7%92%E8%89%B2%E6%9E%B6%E6%9E%84.png)
