@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DreamKeeper;
 
 namespace SFramework
 {
@@ -10,16 +9,13 @@ namespace SFramework
     /// 负责角色的创建(组件组装和初始化)，管理，删除
     /// </summary>
 	public class PlayerMgr : IGameMgr
-	{
-		private GameObject playerBuild; // 用于创建角色
-
+    {
         public IPlayer CurrentPlayer { get; private set; } //切换场景时不要消除引用
-        public PlayerYuka playerYuka;   // DK使用的主角
         public bool CanInput { get; set; }
 
-        public PlayerMgr(GameMainProgram gameMain):base(gameMain)
-		{			
-		}
+        public PlayerMgr(GameMainProgram gameMain) : base(gameMain)
+        {
+        }
 
         public override void Initialize()
         {
@@ -27,35 +23,25 @@ namespace SFramework
                 CurrentPlayer.Initialize();
         }
 
-        public override void Release() {
+        public override void Release()
+        {
             // Player的销毁不由此执行
-		}
-		public override void Update() {
-            if(CurrentPlayer!=null&& CanInput)
+        }
+        public override void Update()
+        {
+            if (CurrentPlayer != null && CanInput)
                 CurrentPlayer.Update();
-		}
-		public override void FixedUpdate() {
-            if(CurrentPlayer!=null&& CanInput)
+        }
+        public override void FixedUpdate()
+        {
+            if (CurrentPlayer != null && CanInput)
                 CurrentPlayer.FixedUpdate();
-		}
+        }
 
-        /// <summary>
-        /// 若Player已存在，则只是移动Pos
-        /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
-        /// <param name="z"></param>
-		public void BuildPlayer(Vector3 _pos)
-		{
-            if (CurrentPlayer == null)
-            {
-                //GameObject.Destroy(GameObject.FindGameObjectWithTag("Player"));
-                playerBuild = GameMainProgram.Instance.resourcesMgr.LoadAsset(@"Players\Kashima", false, _pos,Quaternion.identity);
-                playerYuka = new PlayerYuka(playerBuild);
-                CurrentPlayer = playerYuka;
-                CurrentPlayer.Initialize();
-            }
-                playerBuild.transform.position = _pos;
+        public void SetCurrentPlayer(IPlayer _player)
+        {
+            CurrentPlayer = _player;
+            CurrentPlayer.Initialize();    // 设置Player时进行初始化
         }
 
         public void DestroyPlayer()
@@ -67,6 +53,11 @@ namespace SFramework
             }
             else
                 Debug.Log("无CurrentPlayer可以销毁！");
+        }
+
+        public void SetPlayerPos(Vector3 _pos)
+        {
+            CurrentPlayer.GameObjectInScene.transform.position = _pos;
         }
     }
 }

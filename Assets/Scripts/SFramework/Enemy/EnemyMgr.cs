@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DreamKeeper;
 
 namespace SFramework
 {
@@ -13,7 +12,6 @@ namespace SFramework
 	public class EnemyMgr : IGameMgr {
 
 		private List<IEnemy> enemysInScene;
-		private IEnemy newEnemy; 
 
 		public EnemyMgr(GameMainProgram gameMain):base(gameMain)
 		{
@@ -47,25 +45,31 @@ namespace SFramework
                 e.WhenPlayerDead();
         }
 
-		public void CreateMonster(Vector3 _pos)
+        /// <summary>
+        /// 加入Enemy并初始化
+        /// </summary>
+        /// <param name="_newEnemy"></param>
+		public void AddEnemy(IEnemy _enemy)
 		{
-			newEnemy =new EnemyMonster(GameMainProgram.Instance.resourcesMgr.LoadAsset(@"Enemys\Monster", false, _pos,Quaternion.Euler(0,-180,0)));
-			//协变，会根据new的类型创建一个对象
-			if (newEnemy != null)
+			if (_enemy != null)
 			{
-                enemysInScene.Add(newEnemy);
-                newEnemy.Initialize();
+                enemysInScene.Add(_enemy);
+                _enemy.Initialize();
 			}
 		}
-        public void CreateRoyalKnight(Vector3 _pos)
+
+        /// <summary>
+        /// 删除Enemy并释放
+        /// </summary>
+        /// <param name="_enemy"></param>
+        public void RemoveEnemy(IEnemy _enemy)
         {
-			newEnemy =new EnemyKnight(GameMainProgram.Instance.resourcesMgr.LoadAsset(@"Enemys\RoyalKnight", false, _pos, Quaternion.Euler(0, -180, 0)));
-            //协变，会根据new的类型创建一个对象
-            if (newEnemy != null)
+            if (_enemy != null)
             {
-                enemysInScene.Add(newEnemy);
-                newEnemy.Initialize();
+                enemysInScene.Remove(_enemy);
+                _enemy.Release();
             }
         }
+
     }
 }

@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections;
-using DreamKeeper;
 
 namespace SFramework
 {
@@ -45,7 +44,7 @@ namespace SFramework
 		void Start()
 		{
 			// 設定起始的場景，因为起始场景一般是Unity发布时决定，所以不需要写SceneName，只要赋引用就行了
-			sceneStateController.SetState(new MainScene(sceneStateController), false);
+			sceneStateController.SetState(new StartState(sceneStateController), false);
 		}
 
 		void Update()
