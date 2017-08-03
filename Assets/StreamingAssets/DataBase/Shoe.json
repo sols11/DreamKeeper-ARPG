@@ -1,0 +1,53 @@
+﻿{
+    "学生鞋": {
+        "Type": 6,
+        "Level": 0,
+        "CanLevelUP": false,
+        "IconPath": "Icons\\Shoe\\StudentShoe",
+        "Name": "学生鞋",
+        "CanSale": true,
+        "Price": 20,
+        "SalePrice": 7,
+        "Special": 0,
+        "HP": 0,
+        "SP": 0,
+        "Attack": 0,
+        "Defend": 5,
+        "Crit": 0,
+        "Speed": 0
+    },
+    "童鞋": {
+        "Type": 6,
+        "Level": 0,
+        "CanLevelUP": false,
+        "IconPath": "Icons\\Shoe\\KidShoe",
+        "Name": "童鞋",
+        "CanSale": true,
+        "Price": 10,
+        "SalePrice": 3,
+        "Special": 0,
+        "HP": 0,
+        "SP": 0,
+        "Attack": 0,
+        "Defend": 2,
+        "Crit": 0,
+        "Speed": 0
+    },
+    "长靴": {
+        "Type": 6,
+        "Level": 0,
+        "CanLevelUP": false,
+        "IconPath": "Icons\\Shoe\\Boot",
+        "Name": "童鞋",
+        "CanSale": true,
+        "Price": 30,
+        "SalePrice": 10,
+        "Special": 0,
+        "HP": 0,
+        "SP": 0,
+        "Attack": 0,
+        "Defend": 7,
+        "Crit": 0,
+        "Speed": 0
+    }
+}

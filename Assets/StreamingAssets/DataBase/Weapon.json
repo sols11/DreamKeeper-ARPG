@@ -1,0 +1,53 @@
+﻿{
+  "太刀": {
+    "Type": 3,
+    "Level": 0,
+    "CanLevelUP": false,
+    "IconPath": "Icons\\Weapon\\Katana",
+    "Name": "太刀",
+    "CanSale": true,
+    "Price": 50,
+    "SalePrice": 12,
+    "Special": 0,
+    "HP": 0,
+    "SP": 0,
+    "Attack": 20,
+    "Defend": 0,
+    "Crit": 0,
+    "Speed": 0
+  },
+  "菜刀": {
+    "Type": 3,
+    "Level": 0,
+    "CanLevelUP": false,
+    "IconPath": "Icons\\Weapon\\KitchenKnife",
+    "Name": "菜刀",
+    "CanSale": true,
+    "Price": 20,
+    "SalePrice": 5,
+    "Special": 0,
+    "HP": 0,
+    "SP": 0,
+    "Attack": 5,
+    "Defend": 0,
+    "Crit": 0,
+    "Speed": 0
+  },
+  "青铜刀": {
+    "Type": 3,
+    "Level": 0,
+    "CanLevelUP": false,
+    "IconPath": "Icons\\Weapon\\BronzeKnife",
+    "Name": "青铜刀",
+    "CanSale": true,
+    "Price": 40,
+    "SalePrice": 10,
+    "Special": 0,
+    "HP": 0,
+    "SP": 0,
+    "Attack": 10,
+    "Defend": 0,
+    "Crit": 0,
+    "Speed": 0
+  }
+}

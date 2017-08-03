@@ -1,0 +1,19 @@
+﻿{
+  "泰坦之拳": {
+    "Type": 3,
+    "Level": 0,
+    "CanLevelUP": false,
+    "IconPath": "Icons\\Weapon\\Katana",
+    "Name": "泰坦之拳",
+    "CanSale": false,
+    "Price": 0,
+    "SalePrice": 1,
+    "Special": 0,
+    "HP": 0,
+    "SP": 0,
+    "Attack": 30,
+    "Defend": 0,
+    "Crit": 0,
+    "Speed": 0
+  }
+}

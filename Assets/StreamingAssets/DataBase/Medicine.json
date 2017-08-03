@@ -1,0 +1,20 @@
+﻿{
+    "回复药": {
+        "Type": 0,
+        "Num": 3,
+        "MaxNum": 10,
+        "IconPath": "Icons\\Prop\\Medicine",
+        "Name": "回复药",
+        "CanSale": true,
+        "Price": 50,
+        "SalePrice": 25,
+        "Special": 0,
+        "HP": 50,
+        "SP": 0,
+        "Attack": 0,
+        "Defend": 0,
+        "Crit": 0,
+        "Speed": 0,
+        "Icon": null
+    }
+}
